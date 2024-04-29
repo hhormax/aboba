@@ -8,7 +8,7 @@ lambda_0 = 632e-9
 L = 100
 
 # Количество точек для расчета
-num_points = 100
+num_points = 10000
 
 # Оптическая разность путей
 delta_L = np.linspace(0, L, num_points)
