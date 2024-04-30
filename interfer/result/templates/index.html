@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Интерферометр</title>
+	<link rel="stylesheet" href="{% static "css/style.css" %}" />
+</head>
+<body>
+    <script src="{% static 'js/create_model.js' %}"></script>
+    <div class="container">
+        <!-- Первая часть с кнопками и полями для ввода текста -->
+        <div class="part">
+            <h2>Данные для ввода</h2>
+						
+            <form method="post">
+				{% csrf_token %}
+				<input type="text" placeholder='Плечо' name="sholder">
+				<button type="submit">Restart</button>
+			</form>
+            <!-- <input type="text" placeholder="Введите текст"> -->
+						<!-- <br> -->
+						<button>Start</button>
+						<br>
+            <button>Stop</button>
+						
+        </div>
+        <!-- Вторая часть - пустая область -->
+        <div class="part">
+            <h2>Рисунок установки</h2>
+            <!-- Пустая область -->
+        </div>
+        <!-- Третья часть с полем для отображения картинки -->
+        <div class="part">
+            <h2>График</h2>
+             {{ graph|safe }}
+						 <br>
+						 <h3>L = {{ L }}</h3>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+/* Стили для разделения на три части */
+.container {
+	display: flex;
+	flex-direction: row;
+}
+.part {
+	flex: 1;
+	padding: 20px;
+}
+.part:nth-child(2) {
+	background-color: #f0f0f0; /* Серый цвет для второй части */
+}
